@@ -9,9 +9,11 @@ import CART from "../../../../public/assets/cartIcon.svg";
 import FAV from "../../../../public/assets/heartIcon.svg";
 import MENU from "../../../../public/assets/menuIcon.svg";
 import { useState } from "react";
+import SideBar from "../SideBar";
 
 const TopBar = () => {
   const [mobileShow, setMobileShow] = useState(false);
+  const [sideBarShow, setSideBarShow] = useState(false);
   return (
     <div className="fixed top-0 w-full z-10 bg-white">
       <ContentWrapper>
@@ -41,7 +43,7 @@ const TopBar = () => {
             <li className="my-0 mx-5 capitalize text-lg">
               <Image height={30} width={30} src={FAV} alt="whish-list"/>
             </li>
-            <li className="my-0 mx-5 capitalize text-lg">
+            <li className="my-0 mx-5 capitalize text-lg" onClick={()=>setSideBarShow(!sideBarShow)}>
               <Image height={30} width={30} src={CART} alt="cart"/>
             </li>
             <li
@@ -51,6 +53,9 @@ const TopBar = () => {
               <Image height={30} width={30} src={MENU} alt="menu"/>
             </li>
           </ul>
+          {sideBarShow && 
+            <SideBar sideBarShow={sideBarShow} setSideBarShow={setSideBarShow}/>
+          }
         </nav>
       </ContentWrapper>
     </div>

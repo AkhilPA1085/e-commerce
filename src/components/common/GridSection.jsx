@@ -1,6 +1,6 @@
 import React from 'react'
 import ContentWrapper from './ContentWrapper'
-import CategoryCard from '../category/CategoryCard'
+import CategoryCard from './CategoryCard'
 
 const GridSection = ({cols}) => {
   return (

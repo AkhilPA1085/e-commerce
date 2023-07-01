@@ -5,7 +5,7 @@ import ContentWrapper from "../common/ContentWrapper";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 
-import CategoryCard from "../category/CategoryCard";
+import CategoryCard from "../common/CategoryCard";
 
 const MainBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

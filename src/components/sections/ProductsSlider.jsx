@@ -1,5 +1,5 @@
 "use client";
-import ProductCard from "../product/ProductCard";
+import ProductCard from "../common/ProductCard";
 import ContentWrapper from "../common/ContentWrapper";
 
 import "keen-slider/keen-slider.min.css";
